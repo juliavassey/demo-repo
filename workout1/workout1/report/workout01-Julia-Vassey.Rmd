@@ -1,0 +1,68 @@
+---
+title: "Workout1"
+author: Julia Vassey
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(xtable)
+library(knitr)
+```
+
+## Who's the best player?
+Data analysis might seem boring and oh so complicated for many of us if we think of it as a combination of numbers, regressions and statistical inferencies. However, if we take a closer look, we can find data in everything that surrounds us: our homes, food and hobbies. Let's say you are a basketball fun. You like watching games and you have favorite players. You can get a kick out of this hobby by not only attending matches, watching games on TV or follow your favorite NBA stars on Instagram or Twitter. You can also get some fun facts from... data analysis. It means data can be fun if it is explained and presented in a simple, digestible way, relatble to your day-to-day life. Here is an example. 
+
+We looked at the 2016 season scoring data for the top five NBA players and calculated the field goals for each of those players. 
+
+The 2016 was very successful for Draymond Green, who was at the top of the chart, leading the list of the 2PT Field Goal players. Not suprising! Draymond Green is a three-time NBA champion and a three-time NBA All-Star. 
+
+```{r out.width ="30%", echo = FALSE, fig.align="center"}
+knitr:: include_graphics("../images/Draymond.png")
+
+
+```
+
+```{r echo=FALSE, results = 'oasis'}
+table1 = read.csv("../data/table1.csv")
+kable(table1, caption = "2PT Field Goal Players")
+```
+
+But that was not the only successful scroing for Draymond Green. The player was also at the top among 3PT Field Goal players.
+
+```{r echo=FALSE, results = 'oasis'}
+table2 = read.csv("../data/table2.csv")
+kable(table2, caption = "3PT Field Goal Players")
+```
+
+And - summarising the results, Draymond led in total field goals in 2016, compared to his "Golden State Warriors" teammates.  
+
+```{r echo=FALSE, results = 'oasis'}
+table3 = read.csv("../data/table3.csv")
+kable(table3, caption = "Total Shots Players")
+
+```
+
+
+
+## Let's look at charts... Here is a different story. 
+But let' look at success from a different angle. When it comes to the number of shots, Stephen Curry led the way. The player made the largest number of shots during the 2016 season, compared to his team members. 
+
+
+
+```{r out.width ="80%", echo = FALSE, fig.align="center"}
+knitr:: include_graphics("../images/gsw-shot-charts.png")
+
+
+```
+
+The outcome? Data can be fun, visual and quite precize. It can show you real facts without pure speculation and turn your favorite hobby into.. science!
+
+NBA fans are looking forward to the 2017 season and are anxoiusly waiting who will become the next star. 
+
+[References: Draymond Green](https://en.wikipedia.org/wiki/Draymond_Green)
+
+
+
+
+
