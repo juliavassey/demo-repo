@@ -1,0 +1,14 @@
+Package: binomial
+Type: Package
+Title:  Building a binomial distribution
+Version: 0.1.0
+Author: Julia Vassey
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: The package `"binomial"` allows a user to build a binomial distribution data frame 
+and plot a distribution. To implement this task, the package contains a number of functions 
+from choosing number of successes in trials, to distribtion probabilities to making auxilary functions, 
+incuding mean, median and mode.
+
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true

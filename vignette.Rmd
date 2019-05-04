@@ -1,0 +1,99 @@
+---
+title: "Vignettes"
+author: "Julia_Vassey"
+date: "5/3/2019"
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{Binomial}
+  %\VignetteEngine{knitr::rmarkdown} 
+  %\VignetteEncoding{UTF-8}
+  
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+
+
+## Binomial
+
+The package `"binomial"` allows a user to build a binomial distribution data frame and plot a distribution. To implement this task, the package contains a number of functions from choosing number of successes in trials, to distribtion probabilities to making auxilary functions, incuding mean, median and mode. 
+
+
+## Creating 'bin_choose'  
+
+The first step is to create a `"bin_choose" function that returns us the number of ways we can choose success out of the total number of trials.
+
+```{r}
+bin_choose <- bin_choose(n=5, k=4)
+bin_choose
+```
+
+
+## Creating 'bin_probability' 
+
+The function returns the probability of successes out of the total number of trials.
+
+```{r}
+bin_probability(success = 2, trials = 5, prob = 0.5)
+bin_probability()
+
+```
+
+## Creating 'bin_distribution' 
+
+The function returns probability in binomial distribution in a dataframe with two columns: success and probability.
+
+```{r}
+bin_distribution(trials = 5, prob = 0.5)
+```
+
+
+## Crearting "plot.bindis"
+
+The function returns the plot distribution of successes
+
+```{r}
+plot.bindis(trials = 5, prob = 0.5)
+
+```
+
+## Creating 'bin_cumulative' function
+
+The function returns us cumulative probability and a dataframe with three columns: success, probability and 
+cumulative.
+```{r}
+bin_cumulative(trials = 5, prob = 0.5)
+```
+
+
+## Creating 'bin_variable' function
+
+The function returns us a list of porbabilites and success followed by print.binvar function that prints the numer of trials and the probability of success. 
+
+```{r, fig.show='hold'}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+```
+
+## Creating auxilary functions for mean, vairnce, mode, kurtosis and skewness in the binomial distribution.
+
+```{r cars}
+aux_mean(7,0.2)
+aux_variance(7,0.7)
+aux_mode(7,0.5)
+aux_kurtosis(7,0.5)
+aux_skewness(7,0.9)
+```
+
+## Creating summary.binvar function
+
+The function returns the number of trials and probability with mean, variance, mode, skewness and kurtosis and prints the values with summary.binvar
+
+```{r pressure, echo=FALSE}
+x1 <- bin_variable(10, 0.5)
+summary.binvar(x1)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
